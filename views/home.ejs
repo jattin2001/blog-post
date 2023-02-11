@@ -1,0 +1,32 @@
+
+<%- include("partials/header"); -%>
+    <p id="animatedTitle">Welcome to JK Blogs </p>
+    <div class="jumbotron p-3 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic"><span class="green">Read</span> and <span class="red">Add</span> new Blog post daily.</h1>
+        <p class="lead my-3">You can read the intersting and amazing articles daily and also you can add new blog post on your own.</p>
+        <p>Click <a class="plus text-decoration-none" href="/compose">+</a>to add new blog post</p>
+      </div>
+    </div>
+    <div class="row mb-2">
+  <%  posts.forEach(function(post){ %>
+    <div class="col-md-6">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <h3 class="mb-0">
+            <a class="text-dark text-decoration-none" href="/posts/<%=post._id%>"><%=post.title%></a>
+          </h3>
+          <p class="card-text mb-auto"><%=post.content.substring(0, 200) + " ..."%></p>
+          <a class="text-decoration-none" href="/posts/<%=post._id%>">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src='<%= post.thumbnailUrl%>' width="200" height="250" alt="Thumbnail" class="img-thumbnail">
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+
+<%- include("partials/footer"); -%>
+
+

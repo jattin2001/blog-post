@@ -1,0 +1,98 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+
+.plus{
+  font-size: 25px;
+  margin: 0 5px;
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+#animatedTitle {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 6s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.post-body{
+  color: gray;
+  line-height: 24px;
+  font-size: larger;
+  margin: 20px;
+  padding: 10px;
+  
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.about-body{
+  color: antiquewhite;
+}
+
+.contact-body{
+  color: antiquewhite;
+}
+
+.footer{
+  background: gainsboro;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
