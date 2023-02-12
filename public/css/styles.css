@@ -107,6 +107,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 1000px) and (min-width: 830px) {
+
+  .row{
+    display: grid;
+    grid-template-columns: auto auto;
+
+  }
+
+}
+
 .flex-auto {
   flex: 0 0 auto;
 }
